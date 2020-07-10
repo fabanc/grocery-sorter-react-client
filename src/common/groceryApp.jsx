@@ -1,7 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './app.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import GroceryItem from '../groceryList/groceryItem'
+import ListGroup from 'react-bootstrap/ListGroup'
 
 export default class App extends React.Component {
 
@@ -9,32 +11,39 @@ export default class App extends React.Component {
       data: []
   }
 
+  addItem(item){
+    console.log(item)
+  }
 
   render(){
     let elements = this.state.data;
     let elementsUI = this.state.data.map((element)=>{
-        return (<GroceryItem name={element}> Something </GroceryItem>)
+        console.log("Print element");
+        return (<GroceryItem name={element}/>)
     })
     return (
       <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload. This is custom.
-          </p>
+        {/* <header className="App-header">    
+        </header> */}
+        <div class="half-width">
+          <ListGroup>
           {this.state.data.map((element)=>{
-        return (<GroceryItem name={element}> Something </GroceryItem>)
-    })
-    }
-        </header>
+            return (<GroceryItem key={element} name={element} addClick={() => this.addItem(element)}> Something </GroceryItem>)
+          })}
+          </ListGroup>
+        </div>
       </div>
+
+
     );
   }
 
 
   setStoreData(data){
-    this.setState({ data: data.data.points });
-    console.log(data);
-    console.log(this.state.data);
+    let points = data.data.points.filter((currentValue, index)=> {
+        return index !== data.data.starts[0] && data.data.ends[0] 
+    })
+    this.setState({ data: points });
   }
 
   componentDidMount() {
