@@ -41,3 +41,7 @@
 .half-width{
   max-width: 30%;
 }
+
+.buttonSpan{
+  padding-right: 1.5em;
+}

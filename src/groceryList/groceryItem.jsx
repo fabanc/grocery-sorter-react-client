@@ -30,7 +30,7 @@ import ListGroup from 'react-bootstrap/ListGroup'
       let mybutton = this.getButtonText();
       return(
 
-            <ListGroup.Item>{this.props.name}
+            <ListGroup.Item><span className="buttonSpan">{this.props.name}</span>
               {mybutton}
             </ListGroup.Item>
       )
