@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Container } from 'reactstrap';
 import './app.css';
+import '../groceryList/GroceryList';
+import { BrowserRouter } from 'react-router-dom';
+import Menu from '../common/Menu';
+import MyRouting from '../common/MyRouting';
+import GroceryList from '../groceryList/GroceryList'
 
 export default class App extends React.Component {
   render(){
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>  
+      <Menu />
+        <Container>
+          <MyRouting />
+          <GroceryList/>
+        </Container>
+      </BrowserRouter>
     );
   }
 }
+
