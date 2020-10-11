@@ -14,7 +14,6 @@ export default class App extends React.Component {
       <Menu />
         <Container>
           <MyRouting />
-          <GroceryList/>
         </Container>
       </BrowserRouter>
     );

@@ -11,7 +11,7 @@ export default function MyRouting({ location }) {
         {/* <React.Suspense fallback={<h1>Loading...</h1>}   > */}
         <Switch location={location}>
           <Route path='/' exact component={Home} />
-          <Route path='/groceryList' exact component={GroceryList} />
+          <Route path='/groceryList' exact component={GroceryList}/>
           <Route path='/about' component={About} />
         </Switch>
         {/* </React.Suspense> */}

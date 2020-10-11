@@ -3,9 +3,6 @@ import '../common/app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GroceryItem from './groceryItem'
 import ListGroup from 'react-bootstrap/ListGroup'
-import { BrowserRouter } from 'react-router-dom';
-import Menu from '../common/Menu';
-import MyRouting from '../common/MyRouting';
 
 export default class GroceryList extends React.Component {
 
@@ -30,17 +27,12 @@ export default class GroceryList extends React.Component {
 
 
   render(){
-    let elements = this.state.data;
-    let elementsUI = this.state.data.map((element)=>{
-        return (<GroceryItem name={element}/>)
-    })
 
     let selectionHandler = this.setSelected.bind(this)
-
     
     return (
       <div className="App">
-        <div class="half-width">
+        <div className="half-width">
           <h3>Choose your products</h3>
           <ListGroup>
           {this.state.data.map((element, index)=>{
@@ -58,9 +50,7 @@ export default class GroceryList extends React.Component {
     })
 
     let point_data = points.map((element, index) => {
-        {
           return {name: element, selected: false, odindex: index}
-        }
     });
 
     point_data.sort(function(a,b){

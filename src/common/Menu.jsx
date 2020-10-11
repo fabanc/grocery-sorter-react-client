@@ -30,6 +30,11 @@ export default function Menu() {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
+          <NavItem>
+              <NavLink tag={RRNavLink} to='/' exact>
+                Home
+              </NavLink>
+            </NavItem>
             <NavItem>
               <NavLink tag={RRNavLink} to='/groceryList' exact>
                 Select your Grocery
