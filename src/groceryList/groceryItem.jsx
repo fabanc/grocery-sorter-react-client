@@ -7,7 +7,7 @@ import ListGroup from 'react-bootstrap/ListGroup'
 
     getButtonText(){
       let text= this.props.selected ? "Remove" : "Add";
-      return (<Button variant="primary" onClick={ () => this.props.setSelected(this.props.index)}>{text}</Button>)
+      return (<Button variant="primary" className="btn-sm" onClick={ () => this.props.setSelected(this.props.index)}>{text}</Button>)
     }
 
     render(){

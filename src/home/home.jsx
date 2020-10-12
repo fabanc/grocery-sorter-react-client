@@ -13,7 +13,7 @@ export default function Home() {
         <ul>
             <li>Get my grocery done fast, without using Online system (leave availble for the vulnerable folks)</li>
             <li>Experiment with Azure Services</li>
-            <li>Practive my skills with the React and Bootstrap APIs</li>
+            <li>Practice my skills with the React and Bootstrap APIs</li>
           </ul>
       </div>
     </>
