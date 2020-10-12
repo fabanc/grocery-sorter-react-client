@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: flex;
 }
 
 .App-logo {
@@ -37,9 +38,20 @@
   }
 }
 
+.full-width{
+  /* width: 100%; */
+  vertical-align: middle;
+  text-align: center;
+  align-content: center;
+}
 
 .half-width{
-  max-width: 30%;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.subheader{
+  text-align: center;
 }
 
 .buttonSpan{

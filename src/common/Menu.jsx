@@ -3,18 +3,18 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
+  // NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownMenu,
-  DropdownItem,
+  // UncontrolledDropdown,
+  // DropdownMenu,
+  // DropdownItem,
 } from 'reactstrap';
 import { NavLink as RRNavLink } from 'react-router-dom';
-import logo from './logo.svg';
-import ToggleMenu from './ToggleMenu';
-import DarkModeButton from './DarkModeButton';
+// import logo from './logo.svg';
+// import ToggleMenu from './ToggleMenu';
+// import DarkModeButton from './DarkModeButton';
 
 
 export default function Menu() {
