@@ -34,14 +34,16 @@ export default class GroceryList extends React.Component {
     return (
       <>
       <div className="row">
-      <p className="text-primary">Select your items and then click sort to get your sorted grocery list.</p>
+      <p className="text-primary" >Select your items and then click sort to get your sorted grocery list.</p>
       </div>
       
       <div className="row">
         {/* <div className="App"> */}
 
           <div className="col-xs-6">
-            <p className="text-muted">Choose your products</p>
+            <div className="row, text-center">
+              <p className="text-muted">Choose your products</p>
+            </div>
             <ListGroup>
             {this.state.data.map((element, index)=>{
               return (<GroceryItem key={element.name} name={element.name} selected={element.selected} index={index} setSelected={selectionHandler} > Something </GroceryItem>)

@@ -56,8 +56,11 @@ export default function Counter(props) {
 
   return (
     <>
-      <p className="text-muted">Sorted Grocery List </p>
-      <Button onClick={getSortedSelect}>Sort</Button>
+      <div className="row, text-center">
+        <p className="text-muted">Sorted Grocery List </p>
+        <Button className="" onClick={getSortedSelect}>Sort</Button>
+      </div>
+      
 
       <ListGroup>
           {sorted.map((element, index)=>{
